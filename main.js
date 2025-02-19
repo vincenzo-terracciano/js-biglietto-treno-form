@@ -1,14 +1,17 @@
 /* select the elemnts */
+const inputEl = document.querySelector("train")
 const nameEl = document.getElementById("name");
 const ageEl = document.querySelector(".age");
 const distanceEl = document.getElementById("distance");
+const destinationEl = document.getElementById("destination")
 const buttonEl = document.querySelector(".btn")
 
 /* select card elements */
 const ticketName = document.querySelector(".card .username");
 const ticketOffer = document.querySelector(".card .offer");
 const ticketCarriage = document.querySelector(".card .number-carriage");
-const ticketPrice = document.querySelector(".card .price-ticket")
+const ticketPrice = document.querySelector(".card .price-ticket");
+const ticketDestination = document.querySelector(".card .place")
 
 
 buttonEl.addEventListener("click", function(e){
@@ -30,6 +33,7 @@ buttonEl.addEventListener("click", function(e){
     console.log(ticket);
 
     ticketName.innerHTML = nameEl.value;
+    ticketDestination.innerHTML = destinationEl.value;
     ticketOffer.innerHTML = ageEl.value + " " + "offer";
     ticketPrice.innerHTML = ticket + "€";
     ticketCarriage.innerHTML = "Carriage number :" + " " + (Math.floor(Math.random() * 10) + 1);

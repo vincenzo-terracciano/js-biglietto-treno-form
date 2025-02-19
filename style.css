@@ -3,3 +3,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+
+h2{
+    text-align: center;
+}
+
+header{
+    background-color: skyblue;
+}
+
+main{
+    background-color: rgb(1, 1, 71);
+}
+
+.card{
+    a{
+        margin: 1rem 0;
+        
+    }
+}
+
+label{
+    color: white;
+}

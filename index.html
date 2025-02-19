@@ -11,31 +11,46 @@
     
     <section>
         <header>
-            <h1>Train Ticket</h1>
+            <h1 class="mb-0 text-center">Train Ticket</h1>
         </header>
 
         
             <main>
-                <div class="container">
+                <div class="container py-3">
                     <form action="" id="train">
-                        <div class="mb-3">
+                        <div>
                             <label for="InputFullName" class="form-label">Full name</label>
                             <input type="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Type your full name">
                         </div> 
-                              
-                        <input type="number" name="distance" id="distance" placeholder="How much km do you have to travel?">
+                        
+                        <div class="w-100 my-4">
+                            <div class="form-group">
+                              <label for="inputNumber" class="input-number-label active">Type the number of km do you want to travel</label>
+                              <div class="input-group input-number">
+                                <input type="number" class="form-control distance" data-bs-input id="distance" name="inputNumber" step="any" placeholder="How much km do you have to travel?" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="my-4">
+                            <label for="InputDestination" class="form-label">Destination</label>
+                            <input type="destination" class="form-control" id="destination" aria-describedby="nameHelp" placeholder="Write the place where do you wanna go">
+                        </div> 
+                        
+                        <div class="my-4">
+                            <label for="InputAge" class="form-label">Age Range</label>
+                            <select class="form-select age" aria-label="Default select example">
+                                <option selected>Select</option>
+                                <option>+18</option>
+                                <option>Over 65</option>
+                                <option>Underage</option>
+                            </select>
+                        </div>
             
-                        <select class="form-select age" aria-label="Default select example">
-                            <option selected>Select</option>
-                            <option>+18</option>
-                            <option>Over 65</option>
-                            <option>Underage</option>
-                        </select>
-            
-                        <button type="button" class="btn btn-primary">Send</button>
+                        <button type="button" class="btn btn-primary my-3">Send</button>
                     </form>
 
-                    <h2>Your ticket</h2>
+                    <h2 class="py-4 text-white">Your ticket</h2>
                         <section>
                             <div class="card">
                                 <div class="card">
@@ -43,6 +58,7 @@
                                     <div class="card-body">
                                       <h5 class="card-title username">Nome</h5>
                                       <ul class="list-group list-group-flush">
+                                        <li class="list-group-item place">Destinazione</li>
                                         <li class="list-group-item offer">Offerta</li>
                                         <li class="list-group-item number-carriage">Carriage</li>
                                         <li class="list-group-item price-ticket">Price</li>
