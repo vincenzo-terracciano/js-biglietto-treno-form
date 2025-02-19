@@ -4,6 +4,12 @@ const ageEl = document.querySelector(".age");
 const distanceEl = document.getElementById("distance");
 const buttonEl = document.querySelector(".btn")
 
+/* select card elements */
+const ticketName = document.querySelector(".card .username");
+const ticketOffer = document.querySelector(".card .offer");
+const ticketCarriage = document.querySelector(".card .number-carriage");
+const ticketPrice = document.querySelector(".card .price-ticket")
+
 
 buttonEl.addEventListener("click", function(e){
     e.preventDefault();
@@ -22,6 +28,11 @@ buttonEl.addEventListener("click", function(e){
         ticket = Number(price.toFixed(2));
     }
     console.log(ticket);
+
+    ticketName.innerHTML = nameEl.value;
+    ticketOffer.innerHTML = ageEl.value + " " + "offer";
+    ticketPrice.innerHTML = ticket + "€";
+    ticketCarriage.innerHTML = "Carriage number :" + " " + (Math.floor(Math.random() * 10) + 1);
 })
 
 
